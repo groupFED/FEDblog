@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <% include ../_includes/head.ejs %>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+          <form action="/admin/signin" class="form" method="post">
+            <div class="form-login">
+              <h4>用户注册</h4>
+              <input type="text" id="uname" name="uname" class="form-control input-sm chat-input" placeholder="用户名" />
+              </br>
+              <input type="text" id="pwd" name="pwd" class="form-control input-sm chat-input" placeholder="密码" />
+              </br>
+              <div class="wrapper">
+                <span class="group-btn">
+                  <a href="/admin/signup" class="btn btn-default btn-md pull-right">注册</a>
+                  <button type="submit" class="btn btn-primary btn-md">登陆</button>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

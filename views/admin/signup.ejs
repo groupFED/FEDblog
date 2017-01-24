@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <% include ../_includes/head.ejs %>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+          <form id="form" action="/admin/signup" class="form" method="post">
+            <div class="form-login">
+              <h4>用户登陆</h4>
+              <input type="text" id="uname" name="uname" class="form-control input-sm chat-input" placeholder="用户名" />
+              </br>
+              <input type="password" id="pwd" name="pwd" class="form-control input-sm chat-input" placeholder="密码" />
+              </br>
+              <input type="password" id="repwd" name="repwd" class="form-control input-sm chat-input" placeholder="确认密码" />
+              </br>
+              <div class="wrapper">
+                <span class="group-btn">
+                  <button type="submit" class="btn btn-primary btn-md">提交</button>
+                </span>
+              </div>
+            </div>
+          </form>
+          <script>
+            $(function (){
+              var $form = $("#form");
+              $form.on('submit', function(){
+                var uname = $.trim($("#uname").val());
+                var pwd = $.trim($("#pwd").val());
+                var repwd = $.trim($("#repwd").val());
+                if (uname == '') {
+                  alert('用户名不能为空');
+                  return false;
+                };
+                if (pwd == '') {
+                  alert('请填写密码');
+                  return false;
+                };
+                if (pwd !== repwd) {
+                  alert('密码不一致!');
+                  return false;
+                };
+              });
+            })
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
